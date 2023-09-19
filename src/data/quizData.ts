@@ -15,19 +15,19 @@ const quizData: Question[] = [
   {
     id: 2,
     questionText: "Where is the oldest University in Latin America?",
-    options: ["Dominican Republic", "Peru", "Mexico", "Cuba"],
+    options: ["Peru", "Dominican Republic", "Mexico", "Cuba"],
     correctOption: "Dominican Republic",
   },
   {
     id: 3,
     questionText: "What is the country with the largest number of islands?",
-    options: ["Norway", "Finland", "Philippines", "Australia"],
+    options: ["Finland", "Philippines", "Australia", "Norway"],
     correctOption: "Norway",
   },
   {
     id: 4,
     questionText: "What is the oldest airline in the world?",
-    options: ["KLM", "Avianca", "Qantas", "Aeroflot"],
+    options: ["Avianca", "Qantas", "KLM", "Aeroflot"],
     correctOption: "KLM",
   },
   {
