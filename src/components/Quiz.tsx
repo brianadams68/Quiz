@@ -5,17 +5,21 @@ import quizData from "../data/quizData";
 const Quiz: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [score, setScore] = useState<number>(0);
+  
 
   const handleAnswer = (selectedOption: string) => {
     if (selectedOption === quizData[currentQuestion].correctOption) {
+      console.log(currentQuestion)
       setScore(score + 1);
     }
   
     if (currentQuestion < quizData.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-    } else {
-      alert(`You scored ${score} out of ${quizData.length}`);
-    }
+    } 
+  };
+
+  const handleRestart = () => {
+    setCurrentQuestion(0);
   };
   
 
@@ -25,7 +29,9 @@ const Quiz: React.FC = () => {
         <Question
           question={quizData[currentQuestion]}
           onAnswer={handleAnswer}
+          onRestart={handleRestart}
         />
+        
       ) : (
         <div className="quiz-finished">
           <h2>Quiz Finished!</h2>
